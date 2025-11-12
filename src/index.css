@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 265 47% 20%;
 
-    /* Deep Purple - Professional Authority */
-    --primary: 265 47% 30%;
+    /* Blue Gray - Mountain Clarity */
+    --primary: 198 33% 49%;
     --primary-foreground: 0 0% 100%;
     
-    /* Blue Gray - Mountain Clarity */
-    --accent: 198 33% 49%;
+    /* Deep Purple - Professional Authority */
+    --accent: 265 47% 30%;
     --accent-foreground: 0 0% 100%;
 
-    --secondary: 254 31% 95%;
-    --secondary-foreground: 265 47% 30%;
+    --secondary: 198 20% 95%;
+    --secondary-foreground: 198 33% 49%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 260 27% 54%;
@@ -36,17 +36,17 @@ All colors MUST be HSL.
 
     --border: 254 31% 90%;
     --input: 254 31% 90%;
-    --ring: 265 47% 30%;
+    --ring: 198 33% 49%;
 
     --radius: 0.5rem;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(265 47% 30%) 0%, hsl(260 27% 54%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(198 33% 49%) 0%, hsl(198 33% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(198 33% 49%) 0%, hsl(198 40% 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(265 47% 30%) 0%, hsl(260 27% 54%) 100%);
     
     /* Shadows */
-    --shadow-elegant: 0 10px 40px -10px hsl(265 47% 30% / 0.2);
-    --shadow-accent: 0 4px 20px hsl(198 33% 49% / 0.3);
+    --shadow-elegant: 0 10px 40px -10px hsl(198 33% 49% / 0.2);
+    --shadow-accent: 0 4px 20px hsl(265 47% 30% / 0.3);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -62,24 +62,24 @@ All colors MUST be HSL.
     --popover: 265 40% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 254 31% 67%;
-    --primary-foreground: 265 47% 20%;
+    --primary: 198 40% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 265 35% 18%;
+    --secondary: 198 35% 18%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 260 30% 20%;
-    --muted-foreground: 254 20% 65%;
+    --muted: 198 30% 20%;
+    --muted-foreground: 198 20% 65%;
 
-    --accent: 198 33% 49%;
+    --accent: 265 47% 35%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 75% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 260 30% 20%;
-    --input: 260 30% 20%;
-    --ring: 254 31% 67%;
+    --border: 198 30% 20%;
+    --input: 198 30% 20%;
+    --ring: 198 40% 60%;
   }
 }
 
