@@ -5,7 +5,7 @@ import workshopBg from "@/assets/workshop-bg.jpg";
 
 const FeaturedWorkshop = () => {
   return (
-    <section id="offerings" className="py-24 bg-background relative">
+    <section id="programs" className="py-24 bg-background relative">
       {/* Background */}
       <div className="absolute inset-0 opacity-5">
         <img src={workshopBg} alt="" className="w-full h-full object-cover" />
@@ -25,7 +25,7 @@ const FeaturedWorkshop = () => {
               <div className="space-y-2">
                 <CardTitle className="text-3xl md:text-4xl font-bold text-primary">
                   Rising to the Occasion:
-                  <span className="block text-accent mt-1">Leadership in Turbulent Times</span>
+                  <span className="block text-accent mt-1">Leadership In Turbulent Times</span>
                 </CardTitle>
                 <CardDescription className="text-lg flex items-center gap-2">
                   <Calendar className="h-5 w-5 text-accent" />
@@ -122,19 +122,19 @@ const FeaturedWorkshop = () => {
                   Our Foundation: The Emergenetics® Profile
                 </h3>
                 <p className="text-muted-foreground text-lg">
-                  This workshop is built on the foundation of the Emergenetics Profile, a powerful tool revealing how you prefer to think and behave. We don't just teach you <em>a way</em>; we help you find <em>your way</em> by aligning proven leadership methods with your innate strengths.
+                  This workshop is built on the foundation of the <a href="https://emergenetics.com/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-semibold" >Emergenetics</a> Profile, a powerful tool revealing how you prefer to think and behave. We don't just teach you <em>a way</em>; we help you find <em>your way</em> by aligning proven leadership methods with your innate strengths.
                 </p>
               </div>
 
               {/* CTA */}
-              <div className="flex flex-col items-center gap-4 pt-8">
+              {/* <div className="flex flex-col items-center gap-4 pt-8">
                 <Button variant="hero" size="lg" className="text-lg px-8 py-6 h-auto" asChild>
                   <a href="#register">Register Now - Secure Your Spot</a>
                 </Button>
                 <p className="text-sm text-muted-foreground text-center max-w-2xl">
                   <strong>Important Next Step:</strong> Upon registration, you will receive an email with a link to complete your confidential Emergenetics Profile through a brief online assessment.
                 </p>
-              </div>
+              </div> */}
             </CardContent>
           </Card>
         </div>

@@ -68,18 +68,18 @@ const Contact = () => {
           <div id="register" className="text-center pt-8">
             <Card className="border-2 border-accent/20 shadow-xl">
               <CardHeader>
-                <CardTitle className="text-3xl font-bold text-primary">Ready to Register?</CardTitle>
+                <CardTitle className="text-3xl font-bold text-primary">Ready to Learn More?</CardTitle>
                 <CardDescription className="text-lg">
                   Invest in your leadership potential today
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Registration details and scheduling information will be available soon. Contact us to express your interest and be notified when registration opens.
+                  Contact us to express your interest and explore training availability for your team.
                 </p>
                 <Button variant="hero" size="lg" className="text-lg px-8 py-6 h-auto" asChild>
                   <a href="mailto:info@peaktrainingacademy.com?subject=Workshop Registration Interest">
-                    Express Interest
+                    Let's Connect
                   </a>
                 </Button>
               </CardContent>

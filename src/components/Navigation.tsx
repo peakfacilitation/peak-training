@@ -1,73 +1,119 @@
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
-import { useState } from "react";
+import peakLogo from "@/assets/pta-logo-xs-white.png";
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsMobileMenuOpen(false);
+    }
+  };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4 lg:px-8">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-background/95 backdrop-blur-md shadow-soft" : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <a href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-primary">Peak Training Academy</span>
-            </a>
+          <div className="flex items-center gap-2">
+            <img
+              src={peakLogo}
+              alt="Peak Facilitation Logo"
+              className="w-10 h-10 rounded-lg object-cover"
+            />
+            <span className={`font-bold text-xl transition-all duration-300 ${
+              !isScrolled && "text-accent"
+            }`}>Peak Training Academy</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-foreground hover:text-accent transition-colors">
+          <div className="hidden md:flex items-center gap-8">
+            <button
+              onClick={() => scrollToSection("about")}
+              className={`hover:text-accent transition-colors font-medium transition-all duration-300 ${
+                !isScrolled && "text-accent hover:text-secondary"
+              }`}
+            >
               About
-            </a>
-            <a href="#offerings" className="text-foreground hover:text-accent transition-colors">
-              Offerings
-            </a>
-            <a href="#contact" className="text-foreground hover:text-accent transition-colors">
+            </button>
+            <button
+              onClick={() => scrollToSection("programs")}
+              className={`hover:text-accent transition-colors font-medium transition-all duration-300 ${
+                !isScrolled && "text-accent hover:text-secondary"
+              }`}
+            >
+              Programs
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className={`hover:text-accent transition-colors font-medium transition-all duration-300 ${
+                !isScrolled && "text-accent hover:text-secondary"
+              }`}
+            >
               Contact
-            </a>
-            <Button variant="hero" size="lg" asChild>
-              <a href="#register">Register Now</a>
+            </button>
+            <Button onClick={() => scrollToSection("contact")} size="lg" variant="hero">
+              Get In Touch
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 text-accent"
           >
-            <Menu className="h-6 w-6 text-foreground" />
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-4">
-            <a
-              href="#about"
-              className="block text-foreground hover:text-accent transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </a>
-            <a
-              href="#offerings"
-              className="block text-foreground hover:text-accent transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Offerings
-            </a>
-            <a
-              href="#contact"
-              className="block text-foreground hover:text-accent transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </a>
-            <Button variant="hero" size="lg" className="w-full" asChild>
-              <a href="#register">Register Now</a>
-            </Button>
+        {isMobileMenuOpen && (
+          <div className="md:hidden pb-6 animate-fade-in bg-background/95 backdrop-blur-md shadow-soft rounded-b-lg mt-2">
+            <div className="flex flex-col gap-4">
+              <button
+                onClick={() => scrollToSection("about")}
+                className={`text-accent hover:text-primary transition-colors font-medium transition-all duration-300 ${
+                  !isScrolled && "text-accent"
+                }`}
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollToSection("programs")}
+                className={`text-accent hover:text-primary transition-colors font-medium transition-all duration-300 ${
+                  !isScrolled && "text-accent"
+                }`}
+              >
+                Programs
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className={`text-accent hover:text-primary transition-colors font-medium transition-all duration-300 ${
+                  !isScrolled && "text-accent"
+                }`}
+              >
+                Contact
+              </button>
+              <Button onClick={() => scrollToSection("contact")} size="lg" className="w-full">
+                Get In Touch
+              </Button>
+            </div>
           </div>
         )}
       </div>

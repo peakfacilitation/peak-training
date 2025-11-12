@@ -1,3 +1,6 @@
+import { Brain } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+
 const About = () => {
   return (
     <section id="about" className="py-24 bg-secondary">
@@ -13,21 +16,30 @@ const About = () => {
             We specialize in intensive, practical training programs that move beyond theory to deliver real-world skills for today's leaders. Our approach combines evidence-based frameworks with personalized insights, helping you understand your unique strengths and lead with confidence through uncertainty.
           </p>
           <div className="grid md:grid-cols-3 gap-8 pt-12">
-            <div className="space-y-3">
-              <div className="text-5xl font-bold text-accent">2.5</div>
-              <div className="text-lg font-semibold text-primary">Days of Intensive Training</div>
-              <div className="text-muted-foreground">Deep, focused learning experiences</div>
-            </div>
-            <div className="space-y-3">
-              <div className="text-5xl font-bold text-accent">∞</div>
-              <div className="text-lg font-semibold text-primary">Proven Frameworks</div>
-              <div className="text-muted-foreground">Evidence-based leadership models</div>
-            </div>
-            <div className="space-y-3">
-              <div className="text-5xl font-bold text-accent">1:1</div>
-              <div className="text-lg font-semibold text-primary">Personalized Insights</div>
-              <div className="text-muted-foreground">Emergenetics profiling included</div>
-            </div>
+            <Card className="bg-background border-none">
+              <CardHeader>
+                <CardTitle className="text-xl">Intensive Training</CardTitle>
+                <CardDescription className="font-semibold text-primary pt-2">
+                  Deep, focused learning experiences
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="bg-background border-none">
+              <CardHeader>
+                <CardTitle className="text-xl">Proven Frameworks</CardTitle>
+                <CardDescription className="font-semibold text-primary pt-2">
+                  Evidence-based leadership models
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="bg-background border-none">
+              <CardHeader>
+                <CardTitle className="text-xl">Personalized Insights</CardTitle>
+                <CardDescription className="font-semibold text-primary pt-2">
+                  Emergenetics profiling included
+                </CardDescription>
+              </CardHeader>
+            </Card>
           </div>
         </div>
       </div>
