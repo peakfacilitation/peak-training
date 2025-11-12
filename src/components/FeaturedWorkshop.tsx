@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, Calendar, Users, Brain } from "lucide-react";
 import workshopBg from "@/assets/workshop-bg.jpg";
+import workshopHeader from "@/assets/workshop-bg-group.jpg";
 
 const FeaturedWorkshop = () => {
   return (
@@ -20,21 +21,31 @@ const FeaturedWorkshop = () => {
 
           {/* Main Workshop Card */}
           <Card className="border-2 border-accent/20 shadow-xl">
-            <CardHeader className="space-y-4 pb-8">
-              <div className="space-y-2">
-                <CardTitle className="text-3xl md:text-4xl font-bold text-primary">
+          <CardHeader className="space-y-6 pb-8">
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+              <img
+                src={workshopHeader}
+                alt="Leadership mural at sunset"
+                className="h-96 w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 px-6 pb-8 text-center">
+                <p className="text-4xl font-semibold text-secondary-foreground">
                   Rising to the Occasion:
-                  <span className="block text-accent mt-1">Leadership In Turbulent Times</span>
-                </CardTitle>
-                <CardDescription className="text-lg flex items-center gap-2">
-                  <Calendar className="h-5 w-5 text-accent" />
-                  <span className="font-semibold">A 2.5-Day Intensive Workshop</span>
-                </CardDescription>
+                </p>
+                <p className="text-5xl font-bold leading-tight text-primary-foreground">
+                  Leadership In Turbulent Times
+                </p>
               </div>
-              <p className="text-lg text-muted-foreground">
-                This workshop moves beyond theory to equip you with the practical tools and self-awareness needed to lead effectively through uncertainty.
-              </p>
-            </CardHeader>
+            </div>
+            <div className="flex items-center justify-center gap-2 text-lg font-semibold text-secondary-foreground">
+              <Calendar className="h-5 w-5 text-accent" />
+              <span>A 2.5-Day Intensive Workshop</span>
+            </div>
+            <p className="text-lg text-muted-foreground">
+              This workshop moves beyond theory to equip you with the practical tools and self-awareness needed to lead effectively through uncertainty.
+            </p>
+          </CardHeader>
 
             <CardContent className="space-y-8">
               {/* What You Will Gain */}
