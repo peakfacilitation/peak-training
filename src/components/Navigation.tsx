@@ -84,33 +84,32 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-6 animate-fade-in bg-background/95 backdrop-blur-md shadow-soft rounded-b-lg mt-2">
-            <div className="flex flex-col gap-4">
+          <div className="md:hidden animate-fade-in mt-3 rounded-3xl border border-border/60 bg-background/90 px-6 py-7 shadow-xl backdrop-blur-md">
+            <div className="flex flex-col gap-3 text-center">
               <button
                 onClick={() => scrollToSection("about")}
-                className={`text-accent hover:text-primary transition-colors font-medium transition-all duration-300 ${
-                  !isScrolled && "text-accent"
-                }`}
+                className="text-accent hover:text-primary transition-colors font-semibold"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("programs")}
-                className={`text-accent hover:text-primary transition-colors font-medium transition-all duration-300 ${
-                  !isScrolled && "text-accent"
-                }`}
+                className="text-accent hover:text-primary transition-colors font-semibold"
               >
                 Programs
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className={`text-accent hover:text-primary transition-colors font-medium transition-all duration-300 ${
-                  !isScrolled && "text-accent"
-                }`}
+                className="text-accent hover:text-primary transition-colors font-semibold"
               >
                 Contact
               </button>
-              <Button onClick={() => scrollToSection("contact")} size="lg" className="w-full">
+              <Button
+                onClick={() => scrollToSection("contact")}
+                size="lg"
+                variant="hero"
+                className="w-full rounded-2xl px-6 py-3 shadow-lg"
+              >
                 Get In Touch
               </Button>
             </div>

@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, Calendar, Users, Brain } from "lucide-react";
 import workshopBg from "@/assets/workshop-bg.jpg";
