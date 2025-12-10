@@ -23,9 +23,14 @@ dist-ssr
 *.sln
 *.sw?
 
-history/*
-.agent/*
-.codex/*
-!.codex/config.toml
+# AI tooling (machine-specific)
+.claude/
+.codex/
+.agent/
+.envrc
+history/
+CLAUDE.md
+AGENTS.md
+BEADS.md
 
 resources/
