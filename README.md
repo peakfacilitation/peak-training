@@ -48,4 +48,4 @@ src/
 
 Deployed to GitHub Pages via GitHub Actions on push to `main`.
 
-Live site: https://peakfacilitation.github.io/peak-ascend-hub/
+Live site: https://peakfacilitation.github.io/peak-training/
