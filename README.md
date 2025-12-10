@@ -1,73 +1,51 @@
-# Welcome to your Lovable project
+# Peak Ascend Hub
 
-## Project info
+Website for Peak Training & Ascent - leadership development and facilitation services.
 
-**URL**: https://lovable.dev/projects/c6b0f09a-4e21-446c-a09f-db655c803b05
+## Tech Stack
 
-## How can I edit this code?
+- **React 18** + **TypeScript** (strict mode)
+- **Vite** - build tooling
+- **Tailwind CSS** - styling
+- **shadcn/ui** - component library (Radix UI primitives)
+- **React Router** - client-side routing
 
-There are several ways of editing your application.
+## Development
 
-**Use Lovable**
+```bash
+# Install dependencies
+npm install
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c6b0f09a-4e21-446c-a09f-db655c803b05) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start dev server (http://localhost:8080)
 npm run dev
+
+# Type check
+npm run typecheck
+
+# Lint
+npm run lint
+
+# Production build
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+src/
+├── components/     # React components
+│   └── ui/        # shadcn/ui components
+├── pages/         # Page components
+├── hooks/         # Custom React hooks
+├── lib/           # Utilities
+└── assets/        # Images, fonts
+```
 
-**Use GitHub Codespaces**
+## Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Deployed to GitHub Pages via GitHub Actions on push to `main`.
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c6b0f09a-4e21-446c-a09f-db655c803b05) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Live site: https://peakfacilitation.github.io/peak-ascend-hub/
